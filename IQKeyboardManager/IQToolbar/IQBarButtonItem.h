@@ -32,7 +32,7 @@
 /**
  Boolean to know if it's a system item or custom item
  */
-@property (nonatomic, readonly) BOOL isSystemItem;
+@property (nonatomic) BOOL isSystemItem;
 
 /**
  Additional target & action to do get callback action. Note that setting custom target & selector doesn't affect native functionality, this is just an additional target to get a callback.

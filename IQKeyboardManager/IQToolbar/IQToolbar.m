@@ -92,6 +92,7 @@
     if (_previousBarButton == nil)
     {
         _previousBarButton = [[IQBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:nil action:nil];
+        _previousBarButton.isSystemItem = NO;
         _previousBarButton.accessibilityLabel = @"Toolbar Previous Button";
     }
     
@@ -103,6 +104,7 @@
     if (_nextBarButton == nil)
     {
         _nextBarButton = [[IQBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:nil action:nil];
+        _nextBarButton.isSystemItem = NO;
         _nextBarButton.accessibilityLabel = @"Toolbar Next Button";
     }
     

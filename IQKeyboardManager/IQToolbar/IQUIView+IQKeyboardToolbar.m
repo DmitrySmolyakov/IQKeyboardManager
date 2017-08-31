@@ -577,8 +577,7 @@
     IQBarButtonItem *prev = toolbar.previousBarButton;
     if (prev.isSystemItem == NO)
     {
-        prev.title = nil;
-        prev.image = imageLeftArrow;
+        prev.title = @"Previous";
         prev.target = target;
         prev.action = previousAction;
     }
@@ -605,8 +604,7 @@
     IQBarButtonItem *next = toolbar.nextBarButton;
     if (next.isSystemItem == NO)
     {
-        next.title = nil;
-        next.image = imageRightArrow;
+        next.title = @"Next";
         next.target = target;
         next.action = nextAction;
     }
