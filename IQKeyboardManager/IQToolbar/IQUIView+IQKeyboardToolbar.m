@@ -636,7 +636,10 @@
     IQBarButtonItem *doneButton = toolbar.doneBarButton;
     if (doneButton.isSystemItem == NO)
     {
-        doneButton =[[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:target action:doneAction];
+        doneButton =[[IQBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:target action:doneAction];
+        doneButton.title = @"Done";
+        [doneButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateNormal];
+        [doneButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor grayColor]} forState:UIControlStateDisabled];
         doneButton.invocation = toolbar.doneBarButton.invocation;
         doneButton.accessibilityLabel = toolbar.doneBarButton.accessibilityLabel;
         toolbar.doneBarButton = doneButton;

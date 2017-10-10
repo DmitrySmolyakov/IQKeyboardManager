@@ -93,6 +93,8 @@
     {
         _previousBarButton = [[IQBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:nil action:nil];
         _previousBarButton.isSystemItem = NO;
+        [_previousBarButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateNormal];
+        [_previousBarButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor grayColor]} forState:UIControlStateDisabled];
         _previousBarButton.accessibilityLabel = @"Toolbar Previous Button";
     }
     
@@ -105,6 +107,8 @@
     {
         _nextBarButton = [[IQBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:nil action:nil];
         _nextBarButton.isSystemItem = NO;
+        [_nextBarButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateNormal];
+        [_nextBarButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor grayColor]} forState:UIControlStateDisabled];
         _nextBarButton.accessibilityLabel = @"Toolbar Next Button";
     }
     
@@ -126,7 +130,10 @@
 {
     if (_doneBarButton == nil)
     {
-        _doneBarButton = [[IQBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStyleDone target:nil action:nil];
+        _doneBarButton = [[IQBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:nil action:nil];
+        _doneBarButton.title = @"Done";
+        [_doneBarButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateNormal];
+        [_doneBarButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor grayColor]} forState:UIControlStateDisabled];
         _doneBarButton.accessibilityLabel = @"Toolbar Done Button";
     }
     
