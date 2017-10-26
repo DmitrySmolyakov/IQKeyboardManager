@@ -186,7 +186,10 @@
     }
     else
     {
-        doneButton = [[IQBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStyleDone target:target action:action];
+        doneButton =[[IQBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:target action:action];
+        doneButton.title = @"Done";
+        [doneButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateNormal];
+        [doneButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor grayColor]} forState:UIControlStateDisabled];
         doneButton.invocation = toolbar.doneBarButton.invocation;
         doneButton.accessibilityLabel = toolbar.doneBarButton.accessibilityLabel;
         toolbar.doneBarButton = doneButton;
@@ -255,7 +258,10 @@
     }
     else
     {
-        doneButton =[[IQBarButtonItem alloc] initWithTitle:text style:UIBarButtonItemStyleDone target:target action:action];
+        doneButton =[[IQBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:target action:action];
+        doneButton.title = @"Done";
+        [doneButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateNormal];
+        [doneButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor grayColor]} forState:UIControlStateDisabled];
         doneButton.invocation = toolbar.doneBarButton.invocation;
         doneButton.accessibilityLabel = toolbar.doneBarButton.accessibilityLabel;
         toolbar.doneBarButton = doneButton;
@@ -323,7 +329,10 @@
     IQBarButtonItem *doneButton = toolbar.doneBarButton;
     if (doneButton.isSystemItem == NO)
     {
-        doneButton =[[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:target action:action];
+        doneButton =[[IQBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:target action:action];
+        doneButton.title = @"Done";
+        [doneButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateNormal];
+        [doneButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor grayColor]} forState:UIControlStateDisabled];
         doneButton.invocation = toolbar.doneBarButton.invocation;
         doneButton.accessibilityLabel = toolbar.doneBarButton.accessibilityLabel;
         toolbar.doneBarButton = doneButton;
@@ -416,7 +425,10 @@
     }
     else
     {
-        doneButton =[[IQBarButtonItem alloc] initWithTitle:rightTitle style:UIBarButtonItemStyleDone target:target action:rightAction];
+        doneButton =[[IQBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:target action:rightAction];
+        doneButton.title = @"Done";
+        [doneButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateNormal];
+        [doneButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor grayColor]} forState:UIControlStateDisabled];
         doneButton.invocation = toolbar.doneBarButton.invocation;
         doneButton.accessibilityLabel = toolbar.doneBarButton.accessibilityLabel;
         toolbar.doneBarButton = doneButton;
@@ -494,7 +506,10 @@
     IQBarButtonItem *doneButton = toolbar.doneBarButton;
     if (doneButton.isSystemItem == NO)
     {
-        doneButton =[[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:target action:doneAction];
+        doneButton =[[IQBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:target action:doneAction];
+        doneButton.title = @"Done";
+        [doneButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateNormal];
+        [doneButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor grayColor]} forState:UIControlStateDisabled];
         doneButton.invocation = toolbar.doneBarButton.invocation;
         doneButton.accessibilityLabel = toolbar.doneBarButton.accessibilityLabel;
         toolbar.doneBarButton = doneButton;
@@ -788,7 +803,10 @@
     }
     else
     {
-        doneButton = [[IQBarButtonItem alloc] initWithImage:rightButtonImage style:UIBarButtonItemStyleDone target:target action:rightButtonAction];
+        doneButton =[[IQBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:target action:rightButtonAction];
+        doneButton.title = @"Done";
+        [doneButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateNormal];
+        [doneButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor grayColor]} forState:UIControlStateDisabled];
         doneButton.invocation = toolbar.doneBarButton.invocation;
         doneButton.accessibilityLabel = toolbar.doneBarButton.accessibilityLabel;
         toolbar.doneBarButton = doneButton;
@@ -930,7 +948,10 @@
     }
     else
     {
-        doneButton =[[IQBarButtonItem alloc] initWithTitle:rightButtonTitle style:UIBarButtonItemStyleDone target:target action:rightButtonAction];
+        doneButton =[[IQBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:target action:rightButtonAction];
+        doneButton.title = @"Done";
+        [doneButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateNormal];
+        [doneButton setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor grayColor]} forState:UIControlStateDisabled];
         doneButton.invocation = toolbar.doneBarButton.invocation;
         doneButton.accessibilityLabel = toolbar.doneBarButton.accessibilityLabel;
         toolbar.doneBarButton = doneButton;
